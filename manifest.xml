@@ -6,17 +6,17 @@
            xsi:type="TaskPaneApp">
 
   <Id>9c3d6f4a-7a31-4a3e-9d3f-1b8d5e6f0aaa</Id>
-  <Version>0.1.0.0</Version>
+  <Version>0.2.0.0</Version>
   <ProviderName>SharpCell</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="SharpCell" />
-  <Description DefaultValue="ThinkCell-style productivity add-in for Excel: advanced charts, smart labels, data linking, formatting automation." />
+  <Description DefaultValue="ThinkCell-style productivity add-in for Excel: native charts, smart labels, data linking, formatting automation." />
   <IconUrl DefaultValue="https://csava-kss.github.io/SharpXCell/assets/icon-64.png" />
   <HighResolutionIconUrl DefaultValue="https://csava-kss.github.io/SharpXCell/assets/icon-128.png" />
-  <SupportUrl DefaultValue="https://www.contoso.com/help" />
+  <SupportUrl DefaultValue="https://github.com/csava-kss/SharpXCell" />
 
   <AppDomains>
-    <AppDomain>https://localhost:3000</AppDomain>
+    <AppDomain>https://csava-kss.github.io</AppDomain>
   </AppDomains>
 
   <Hosts>
@@ -52,169 +52,126 @@
 
                 <Control xsi:type="Button" id="SharpCell.Btn.Waterfall">
                   <Label resid="Btn.Waterfall.Label" />
-                  <Supertip>
-                    <Title resid="Btn.Waterfall.Label" />
-                    <Description resid="Btn.Waterfall.Tooltip" />
-                  </Supertip>
-                  <Icon>
-                    <bt:Image size="16" resid="Icon.16" />
-                    <bt:Image size="32" resid="Icon.32" />
-                    <bt:Image size="80" resid="Icon.80" />
-                  </Icon>
-                  <Action xsi:type="ExecuteFunction">
-                    <FunctionName>insertWaterfall</FunctionName>
-                  </Action>
+                  <Supertip><Title resid="Btn.Waterfall.Label" /><Description resid="Btn.Waterfall.Tooltip" /></Supertip>
+                  <Icon><bt:Image size="16" resid="Icon.16" /><bt:Image size="32" resid="Icon.32" /><bt:Image size="80" resid="Icon.80" /></Icon>
+                  <Action xsi:type="ExecuteFunction"><FunctionName>insertWaterfall</FunctionName></Action>
                 </Control>
 
-                <Control xsi:type="Button" id="SharpCell.Btn.Mekko">
-                  <Label resid="Btn.Mekko.Label" />
-                  <Supertip>
-                    <Title resid="Btn.Mekko.Label" />
-                    <Description resid="Btn.Mekko.Tooltip" />
-                  </Supertip>
-                  <Icon>
-                    <bt:Image size="16" resid="Icon.16" />
-                    <bt:Image size="32" resid="Icon.32" />
-                    <bt:Image size="80" resid="Icon.80" />
-                  </Icon>
-                  <Action xsi:type="ExecuteFunction">
-                    <FunctionName>insertMekko</FunctionName>
-                  </Action>
+                <Control xsi:type="Button" id="SharpCell.Btn.Stacked">
+                  <Label resid="Btn.Stacked.Label" />
+                  <Supertip><Title resid="Btn.Stacked.Label" /><Description resid="Btn.Stacked.Tooltip" /></Supertip>
+                  <Icon><bt:Image size="16" resid="Icon.16" /><bt:Image size="32" resid="Icon.32" /><bt:Image size="80" resid="Icon.80" /></Icon>
+                  <Action xsi:type="ExecuteFunction"><FunctionName>insertStackedTotals</FunctionName></Action>
                 </Control>
 
                 <Control xsi:type="Button" id="SharpCell.Btn.Gantt">
                   <Label resid="Btn.Gantt.Label" />
-                  <Supertip>
-                    <Title resid="Btn.Gantt.Label" />
-                    <Description resid="Btn.Gantt.Tooltip" />
-                  </Supertip>
-                  <Icon>
-                    <bt:Image size="16" resid="Icon.16" />
-                    <bt:Image size="32" resid="Icon.32" />
-                    <bt:Image size="80" resid="Icon.80" />
-                  </Icon>
-                  <Action xsi:type="ExecuteFunction">
-                    <FunctionName>insertGantt</FunctionName>
-                  </Action>
+                  <Supertip><Title resid="Btn.Gantt.Label" /><Description resid="Btn.Gantt.Tooltip" /></Supertip>
+                  <Icon><bt:Image size="16" resid="Icon.16" /><bt:Image size="32" resid="Icon.32" /><bt:Image size="80" resid="Icon.80" /></Icon>
+                  <Action xsi:type="ExecuteFunction"><FunctionName>insertGantt</FunctionName></Action>
                 </Control>
 
-                <Control xsi:type="Button" id="SharpCell.Btn.Butterfly">
-                  <Label resid="Btn.Butterfly.Label" />
-                  <Supertip>
-                    <Title resid="Btn.Butterfly.Label" />
-                    <Description resid="Btn.Butterfly.Tooltip" />
-                  </Supertip>
-                  <Icon>
-                    <bt:Image size="16" resid="Icon.16" />
-                    <bt:Image size="32" resid="Icon.32" />
-                    <bt:Image size="80" resid="Icon.80" />
-                  </Icon>
-                  <Action xsi:type="ExecuteFunction">
-                    <FunctionName>insertButterfly</FunctionName>
-                  </Action>
+                <Control xsi:type="Button" id="SharpCell.Btn.Funnel">
+                  <Label resid="Btn.Funnel.Label" />
+                  <Supertip><Title resid="Btn.Funnel.Label" /><Description resid="Btn.Funnel.Tooltip" /></Supertip>
+                  <Icon><bt:Image size="16" resid="Icon.16" /><bt:Image size="32" resid="Icon.32" /><bt:Image size="80" resid="Icon.80" /></Icon>
+                  <Action xsi:type="ExecuteFunction"><FunctionName>insertFunnel</FunctionName></Action>
+                </Control>
+
+                <Control xsi:type="Button" id="SharpCell.Btn.Pareto">
+                  <Label resid="Btn.Pareto.Label" />
+                  <Supertip><Title resid="Btn.Pareto.Label" /><Description resid="Btn.Pareto.Tooltip" /></Supertip>
+                  <Icon><bt:Image size="16" resid="Icon.16" /><bt:Image size="32" resid="Icon.32" /><bt:Image size="80" resid="Icon.80" /></Icon>
+                  <Action xsi:type="ExecuteFunction"><FunctionName>insertPareto</FunctionName></Action>
+                </Control>
+
+                <Control xsi:type="Menu" id="SharpCell.Menu.MoreCharts">
+                  <Label resid="Menu.MoreCharts.Label" />
+                  <Supertip><Title resid="Menu.MoreCharts.Label" /><Description resid="Menu.MoreCharts.Tooltip" /></Supertip>
+                  <Icon><bt:Image size="16" resid="Icon.16" /><bt:Image size="32" resid="Icon.32" /><bt:Image size="80" resid="Icon.80" /></Icon>
+                  <Items>
+                    <Item id="SharpCell.Item.Treemap">
+                      <Label resid="Item.Treemap.Label" />
+                      <Supertip><Title resid="Item.Treemap.Label" /><Description resid="Item.Treemap.Tooltip" /></Supertip>
+                      <Icon><bt:Image size="16" resid="Icon.16" /><bt:Image size="32" resid="Icon.32" /><bt:Image size="80" resid="Icon.80" /></Icon>
+                      <Action xsi:type="ExecuteFunction"><FunctionName>insertTreemap</FunctionName></Action>
+                    </Item>
+                    <Item id="SharpCell.Item.Sunburst">
+                      <Label resid="Item.Sunburst.Label" />
+                      <Supertip><Title resid="Item.Sunburst.Label" /><Description resid="Item.Sunburst.Tooltip" /></Supertip>
+                      <Icon><bt:Image size="16" resid="Icon.16" /><bt:Image size="32" resid="Icon.32" /><bt:Image size="80" resid="Icon.80" /></Icon>
+                      <Action xsi:type="ExecuteFunction"><FunctionName>insertSunburst</FunctionName></Action>
+                    </Item>
+                    <Item id="SharpCell.Item.Histogram">
+                      <Label resid="Item.Histogram.Label" />
+                      <Supertip><Title resid="Item.Histogram.Label" /><Description resid="Item.Histogram.Tooltip" /></Supertip>
+                      <Icon><bt:Image size="16" resid="Icon.16" /><bt:Image size="32" resid="Icon.32" /><bt:Image size="80" resid="Icon.80" /></Icon>
+                      <Action xsi:type="ExecuteFunction"><FunctionName>insertHistogram</FunctionName></Action>
+                    </Item>
+                    <Item id="SharpCell.Item.BoxWhisker">
+                      <Label resid="Item.BoxWhisker.Label" />
+                      <Supertip><Title resid="Item.BoxWhisker.Label" /><Description resid="Item.BoxWhisker.Tooltip" /></Supertip>
+                      <Icon><bt:Image size="16" resid="Icon.16" /><bt:Image size="32" resid="Icon.32" /><bt:Image size="80" resid="Icon.80" /></Icon>
+                      <Action xsi:type="ExecuteFunction"><FunctionName>insertBoxWhisker</FunctionName></Action>
+                    </Item>
+                    <Item id="SharpCell.Item.Mekko">
+                      <Label resid="Item.Mekko.Label" />
+                      <Supertip><Title resid="Item.Mekko.Label" /><Description resid="Item.Mekko.Tooltip" /></Supertip>
+                      <Icon><bt:Image size="16" resid="Icon.16" /><bt:Image size="32" resid="Icon.32" /><bt:Image size="80" resid="Icon.80" /></Icon>
+                      <Action xsi:type="ExecuteFunction"><FunctionName>insertMekko</FunctionName></Action>
+                    </Item>
+                    <Item id="SharpCell.Item.Butterfly">
+                      <Label resid="Item.Butterfly.Label" />
+                      <Supertip><Title resid="Item.Butterfly.Label" /><Description resid="Item.Butterfly.Tooltip" /></Supertip>
+                      <Icon><bt:Image size="16" resid="Icon.16" /><bt:Image size="32" resid="Icon.32" /><bt:Image size="80" resid="Icon.80" /></Icon>
+                      <Action xsi:type="ExecuteFunction"><FunctionName>insertButterfly</FunctionName></Action>
+                    </Item>
+                  </Items>
                 </Control>
               </Group>
 
               <Group id="SharpCell.Group.Decorate">
                 <Label resid="Group.Decorate.Label" />
-                <Icon>
-                  <bt:Image size="16" resid="Icon.16" />
-                  <bt:Image size="32" resid="Icon.32" />
-                  <bt:Image size="80" resid="Icon.80" />
-                </Icon>
+                <Icon><bt:Image size="16" resid="Icon.16" /><bt:Image size="32" resid="Icon.32" /><bt:Image size="80" resid="Icon.80" /></Icon>
                 <Control xsi:type="Button" id="SharpCell.Btn.CAGR">
                   <Label resid="Btn.CAGR.Label" />
-                  <Supertip>
-                    <Title resid="Btn.CAGR.Label" />
-                    <Description resid="Btn.CAGR.Tooltip" />
-                  </Supertip>
-                  <Icon>
-                    <bt:Image size="16" resid="Icon.16" />
-                    <bt:Image size="32" resid="Icon.32" />
-                    <bt:Image size="80" resid="Icon.80" />
-                  </Icon>
-                  <Action xsi:type="ExecuteFunction">
-                    <FunctionName>addCagrArrow</FunctionName>
-                  </Action>
+                  <Supertip><Title resid="Btn.CAGR.Label" /><Description resid="Btn.CAGR.Tooltip" /></Supertip>
+                  <Icon><bt:Image size="16" resid="Icon.16" /><bt:Image size="32" resid="Icon.32" /><bt:Image size="80" resid="Icon.80" /></Icon>
+                  <Action xsi:type="ExecuteFunction"><FunctionName>addCagrArrow</FunctionName></Action>
                 </Control>
                 <Control xsi:type="Button" id="SharpCell.Btn.Totals">
                   <Label resid="Btn.Totals.Label" />
-                  <Supertip>
-                    <Title resid="Btn.Totals.Label" />
-                    <Description resid="Btn.Totals.Tooltip" />
-                  </Supertip>
-                  <Icon>
-                    <bt:Image size="16" resid="Icon.16" />
-                    <bt:Image size="32" resid="Icon.32" />
-                    <bt:Image size="80" resid="Icon.80" />
-                  </Icon>
-                  <Action xsi:type="ExecuteFunction">
-                    <FunctionName>addStackTotals</FunctionName>
-                  </Action>
+                  <Supertip><Title resid="Btn.Totals.Label" /><Description resid="Btn.Totals.Tooltip" /></Supertip>
+                  <Icon><bt:Image size="16" resid="Icon.16" /><bt:Image size="32" resid="Icon.32" /><bt:Image size="80" resid="Icon.80" /></Icon>
+                  <Action xsi:type="ExecuteFunction"><FunctionName>addStackTotals</FunctionName></Action>
                 </Control>
               </Group>
 
               <Group id="SharpCell.Group.Format">
                 <Label resid="Group.Format.Label" />
-                <Icon>
-                  <bt:Image size="16" resid="Icon.16" />
-                  <bt:Image size="32" resid="Icon.32" />
-                  <bt:Image size="80" resid="Icon.80" />
-                </Icon>
+                <Icon><bt:Image size="16" resid="Icon.16" /><bt:Image size="32" resid="Icon.32" /><bt:Image size="80" resid="Icon.80" /></Icon>
                 <Control xsi:type="Button" id="SharpCell.Btn.ApplyStyle">
                   <Label resid="Btn.Style.Label" />
-                  <Supertip>
-                    <Title resid="Btn.Style.Label" />
-                    <Description resid="Btn.Style.Tooltip" />
-                  </Supertip>
-                  <Icon>
-                    <bt:Image size="16" resid="Icon.16" />
-                    <bt:Image size="32" resid="Icon.32" />
-                    <bt:Image size="80" resid="Icon.80" />
-                  </Icon>
-                  <Action xsi:type="ExecuteFunction">
-                    <FunctionName>applyCorporateStyle</FunctionName>
-                  </Action>
+                  <Supertip><Title resid="Btn.Style.Label" /><Description resid="Btn.Style.Tooltip" /></Supertip>
+                  <Icon><bt:Image size="16" resid="Icon.16" /><bt:Image size="32" resid="Icon.32" /><bt:Image size="80" resid="Icon.80" /></Icon>
+                  <Action xsi:type="ExecuteFunction"><FunctionName>applyCorporateStyle</FunctionName></Action>
                 </Control>
                 <Control xsi:type="Button" id="SharpCell.Btn.Cleanup">
                   <Label resid="Btn.Cleanup.Label" />
-                  <Supertip>
-                    <Title resid="Btn.Cleanup.Label" />
-                    <Description resid="Btn.Cleanup.Tooltip" />
-                  </Supertip>
-                  <Icon>
-                    <bt:Image size="16" resid="Icon.16" />
-                    <bt:Image size="32" resid="Icon.32" />
-                    <bt:Image size="80" resid="Icon.80" />
-                  </Icon>
-                  <Action xsi:type="ExecuteFunction">
-                    <FunctionName>cleanupChart</FunctionName>
-                  </Action>
+                  <Supertip><Title resid="Btn.Cleanup.Label" /><Description resid="Btn.Cleanup.Tooltip" /></Supertip>
+                  <Icon><bt:Image size="16" resid="Icon.16" /><bt:Image size="32" resid="Icon.32" /><bt:Image size="80" resid="Icon.80" /></Icon>
+                  <Action xsi:type="ExecuteFunction"><FunctionName>cleanupChart</FunctionName></Action>
                 </Control>
               </Group>
 
               <Group id="SharpCell.Group.Panel">
                 <Label resid="Group.Panel.Label" />
-                <Icon>
-                  <bt:Image size="16" resid="Icon.16" />
-                  <bt:Image size="32" resid="Icon.32" />
-                  <bt:Image size="80" resid="Icon.80" />
-                </Icon>
+                <Icon><bt:Image size="16" resid="Icon.16" /><bt:Image size="32" resid="Icon.32" /><bt:Image size="80" resid="Icon.80" /></Icon>
                 <Control xsi:type="Button" id="SharpCell.Btn.OpenPanel">
                   <Label resid="Btn.Panel.Label" />
-                  <Supertip>
-                    <Title resid="Btn.Panel.Label" />
-                    <Description resid="Btn.Panel.Tooltip" />
-                  </Supertip>
-                  <Icon>
-                    <bt:Image size="16" resid="Icon.16" />
-                    <bt:Image size="32" resid="Icon.32" />
-                    <bt:Image size="80" resid="Icon.80" />
-                  </Icon>
-                  <Action xsi:type="ShowTaskpane">
-                    <TaskpaneId>ButtonId1</TaskpaneId>
-                    <SourceLocation resid="Taskpane.Url" />
-                  </Action>
+                  <Supertip><Title resid="Btn.Panel.Label" /><Description resid="Btn.Panel.Tooltip" /></Supertip>
+                  <Icon><bt:Image size="16" resid="Icon.16" /><bt:Image size="32" resid="Icon.32" /><bt:Image size="80" resid="Icon.80" /></Icon>
+                  <Action xsi:type="ShowTaskpane"><TaskpaneId>ButtonId1</TaskpaneId><SourceLocation resid="Taskpane.Url" /></Action>
                 </Control>
               </Group>
 
@@ -232,21 +189,29 @@
         <bt:Image id="Icon.80" DefaultValue="https://csava-kss.github.io/SharpXCell/assets/icon-80.png" />
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://www.contoso.com/help" />
+        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://github.com/csava-kss/SharpXCell" />
         <bt:Url id="Commands.Url" DefaultValue="https://csava-kss.github.io/SharpXCell/commands.html" />
         <bt:Url id="Taskpane.Url" DefaultValue="https://csava-kss.github.io/SharpXCell/taskpane.html" />
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="SharpCell is ready." />
         <bt:String id="Tab.SharpCell.Label" DefaultValue="SharpCell" />
-        <bt:String id="Group.Charts.Label" DefaultValue="Advanced Charts" />
+        <bt:String id="Group.Charts.Label" DefaultValue="Charts" />
         <bt:String id="Group.Decorate.Label" DefaultValue="Annotations" />
         <bt:String id="Group.Format.Label" DefaultValue="Formatting" />
         <bt:String id="Group.Panel.Label" DefaultValue="Panel" />
         <bt:String id="Btn.Waterfall.Label" DefaultValue="Waterfall" />
-        <bt:String id="Btn.Mekko.Label" DefaultValue="Mekko" />
+        <bt:String id="Btn.Stacked.Label" DefaultValue="Stacked" />
         <bt:String id="Btn.Gantt.Label" DefaultValue="Gantt" />
-        <bt:String id="Btn.Butterfly.Label" DefaultValue="Butterfly" />
+        <bt:String id="Btn.Funnel.Label" DefaultValue="Funnel" />
+        <bt:String id="Btn.Pareto.Label" DefaultValue="Pareto" />
+        <bt:String id="Menu.MoreCharts.Label" DefaultValue="More" />
+        <bt:String id="Item.Treemap.Label" DefaultValue="Treemap" />
+        <bt:String id="Item.Sunburst.Label" DefaultValue="Sunburst" />
+        <bt:String id="Item.Histogram.Label" DefaultValue="Histogram" />
+        <bt:String id="Item.BoxWhisker.Label" DefaultValue="Box &amp; Whisker" />
+        <bt:String id="Item.Mekko.Label" DefaultValue="Mekko (image)" />
+        <bt:String id="Item.Butterfly.Label" DefaultValue="Butterfly (image)" />
         <bt:String id="Btn.CAGR.Label" DefaultValue="CAGR Arrow" />
         <bt:String id="Btn.Totals.Label" DefaultValue="Stack Totals" />
         <bt:String id="Btn.Style.Label" DefaultValue="Apply Style" />
@@ -254,16 +219,24 @@
         <bt:String id="Btn.Panel.Label" DefaultValue="Open SharpCell" />
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="GetStarted.Description" DefaultValue="Use the SharpCell tab to insert advanced charts and apply corporate formatting." />
-        <bt:String id="Btn.Waterfall.Tooltip" DefaultValue="Insert a waterfall chart with connectors and totals from the selected range." />
-        <bt:String id="Btn.Mekko.Tooltip" DefaultValue="Insert a Mekko/Marimekko chart from the selected range." />
-        <bt:String id="Btn.Gantt.Tooltip" DefaultValue="Insert a Gantt timeline chart from the selected range (Task, Start, Duration)." />
-        <bt:String id="Btn.Butterfly.Tooltip" DefaultValue="Insert a butterfly/tornado comparison chart from the selected range." />
-        <bt:String id="Btn.CAGR.Tooltip" DefaultValue="Add a CAGR growth arrow connecting two data points on the selected chart." />
-        <bt:String id="Btn.Totals.Tooltip" DefaultValue="Add segment totals above each stacked column." />
+        <bt:String id="GetStarted.Description" DefaultValue="Use the SharpCell tab to insert native Excel charts and apply corporate formatting." />
+        <bt:String id="Btn.Waterfall.Tooltip" DefaultValue="Insert a native Excel waterfall chart from the selected range." />
+        <bt:String id="Btn.Stacked.Tooltip" DefaultValue="Insert a native stacked column chart with totals labeled on top." />
+        <bt:String id="Btn.Gantt.Tooltip" DefaultValue="Insert a native Gantt timeline (stacked bar) from Task, Start, End/Duration." />
+        <bt:String id="Btn.Funnel.Tooltip" DefaultValue="Insert a native funnel chart for stage-to-stage drop-off." />
+        <bt:String id="Btn.Pareto.Tooltip" DefaultValue="Insert a native Pareto chart (sorted bars + cumulative line)." />
+        <bt:String id="Menu.MoreCharts.Tooltip" DefaultValue="More chart types: Treemap, Sunburst, Histogram, Box &amp; Whisker, plus static Mekko and Butterfly." />
+        <bt:String id="Item.Treemap.Tooltip" DefaultValue="Insert a native treemap." />
+        <bt:String id="Item.Sunburst.Tooltip" DefaultValue="Insert a native sunburst." />
+        <bt:String id="Item.Histogram.Tooltip" DefaultValue="Insert a native histogram." />
+        <bt:String id="Item.BoxWhisker.Tooltip" DefaultValue="Insert a native box-and-whisker chart." />
+        <bt:String id="Item.Mekko.Tooltip" DefaultValue="Insert a Mekko as static image (Excel does not have this natively)." />
+        <bt:String id="Item.Butterfly.Tooltip" DefaultValue="Insert a butterfly chart as static image (Excel does not have this natively)." />
+        <bt:String id="Btn.CAGR.Tooltip" DefaultValue="Add a CAGR growth arrow between two cells." />
+        <bt:String id="Btn.Totals.Tooltip" DefaultValue="Add totals labels to the selected chart." />
         <bt:String id="Btn.Style.Tooltip" DefaultValue="Apply the active corporate style to the selected chart." />
-        <bt:String id="Btn.Cleanup.Tooltip" DefaultValue="Remove gridlines, simplify axes, and tighten margins on the selected chart." />
-        <bt:String id="Btn.Panel.Tooltip" DefaultValue="Open the SharpCell task pane for binding management and settings." />
+        <bt:String id="Btn.Cleanup.Tooltip" DefaultValue="Remove gridlines, simplify axes." />
+        <bt:String id="Btn.Panel.Tooltip" DefaultValue="Open the SharpCell task pane." />
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
